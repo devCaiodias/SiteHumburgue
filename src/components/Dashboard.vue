@@ -57,7 +57,7 @@
         methods: {
             async getPedidos(){
 
-                const rep = await fetch("http://localhost:3000/burgers");
+                const rep = await fetch("https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/burgers");
                 
                 const data = await rep.json();
 
@@ -68,7 +68,7 @@
 
             },
             async getStatus() {
-                const rep = await fetch("http://localhost:3000/status")
+                const rep = await fetch("https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/status")
                 const data = await rep.json();
 
                 this.status = data
@@ -76,7 +76,7 @@
             }, 
             async deleteBurger(id) {
                 
-                const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                const req = await fetch(`https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/burgers/${id}`, {
                     method: "DELETE"
                 });
 
@@ -96,7 +96,7 @@
 
                 const dataJson = JSON.stringify({ status: option});
 
-                const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                const req = await fetch(`https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/burgers/${id}`, {
                     method: "PATCH",
                     headers: {"Content-Type": "application/json"},
                     body: dataJson

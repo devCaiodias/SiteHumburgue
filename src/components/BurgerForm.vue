@@ -65,7 +65,7 @@ import Message from './Message.vue';
         methods: {
             async getIngrediente() {
                 
-                const requestes = await fetch("http://localhost:3000/ingredientes");
+                const requestes = await fetch("https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/ingredientes");
                 const data = await requestes.json()
 
                 this.paes = data.paes;
@@ -86,7 +86,7 @@ import Message from './Message.vue';
 
                 const dataJson = JSON.stringify(data);
 
-                const rep = await fetch("http://localhost:3000/burgers", {
+                const rep = await fetch("https://json-burgue-hpdadj8pj-protagonistaaas-projects.vercel.app/burgers", {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: dataJson
